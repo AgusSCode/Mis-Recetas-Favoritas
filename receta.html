@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detalle de Receta</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Receta - Mis Recetas Favoritas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Detalle de la Receta</h1>
-  </header>
+    <header>
+        <h1>Mis Recetas Favoritas</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="categorias.html">Categorías</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Agregar una Nueva Receta</h2>
+        <form id="form-receta">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" required>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="categorias.html">Categorías</a></li>
-    </ul>
-  </nav>
+            <label for="categoria">Categoría:</label>
+            <select id="categoria" name="categoria" required>
+                <option value="entradas">Entradas</option>
+                <option value="platos-principales">Platos Principales</option>
+                <option value="postres">Postres</option>
+                <option value="bebidas">Bebidas</option>
+            </select>
 
-  <section>
-    <h2>Receta Nombre</h2>
-    <p>Descripción de la receta...</p>
+            <label for="ingredientes">Ingredientes (separados por comas):</label>
+            <textarea id="ingredientes" name="ingredientes" rows="4" required></textarea>
 
-    <h3>Ingredientes:</h3>
-    <ul>
-      <li>Ingrediente 1</li>
-      <li>Ingrediente 2</li>
-      <li>Ingrediente 3</li>
-    </ul>
+            <label for="instrucciones">Instrucciones:</label>
+            <textarea id="instrucciones" name="instrucciones" rows="4" required></textarea>
 
-    <h3>Pasos:</h3>
-    <ol>
-      <li>Paso 1</li>
-      <li>Paso 2</li>
-      <li>Paso 3</li>
-    </ol>
-  </section>
-
-  <footer>
-    <p>© 2024 Gestor de Recetas</p>
-  </footer>
+            <button type="submit">Agregar Receta</button>
+        </form>
+    </section>
+    <footer>
+        <p>Mis Recetas Favoritas &copy; 2024</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
