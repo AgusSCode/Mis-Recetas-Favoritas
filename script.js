@@ -104,7 +104,7 @@ function filtrarPorCategoria() {
                     return `${i + 1}. ${instruccion.trim()}`;
                 }).join(".<br>"); // Separar los pasos con <br>
             } else {
-                // Si las instrucciones son un string sin formato, las convertimos en array y numeramos
+                // Si las instrucciones son un string sin formato, se convierte en array 
                 instruccionesNumeradas = receta.instrucciones.split(". ").map((instruccion, i) => {
                     return `${i + 1}. ${instruccion.trim()}`;
                 }).join(".<br>");
@@ -197,7 +197,7 @@ function manejarFormularioReceta(event) {
 
 // Función para formatear las instrucciones antes de guardarlas o mostrarlas
 function formatearInstrucciones(instrucciones) {
-    // Si las instrucciones son un array, procesamos directamente
+    // Si las instrucciones son un array, se procesan 
     if (Array.isArray(instrucciones)) {
         return instrucciones.map((inst, i) => {
             const paso = inst.trim();
@@ -206,7 +206,7 @@ function formatearInstrucciones(instrucciones) {
         }).join("<br>"); // Separar los pasos con <br>
     }
 
-    // Si las instrucciones son un string, procesamos
+    // Si las instrucciones son un string, se procesan
     return instrucciones.split("\n").map((inst, i) => {
         const paso = inst.trim().replace(/^\d+\.\s*/, ""); // Eliminar numeración manual si existe
         // Asegurarse de que haya un solo punto final
