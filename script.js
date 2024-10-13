@@ -237,18 +237,8 @@ document.addEventListener("DOMContentLoaded", () => {
         instruccionesHelpText.style.fontSize = "12px";
         instruccionesInput.parentNode.insertBefore(instruccionesHelpText, instruccionesInput.nextSibling);
     }
- // Asociar el botón de reinicio a la función reiniciarRecetas
-    const btnReiniciarRecetas = document.getElementById('reiniciar-recetas');
-    if (btnReiniciarRecetas) {
-        btnReiniciarRecetas.addEventListener('click', reiniciarRecetas);
-    }
     filtrarPorCategoria(); // Asegura que las recetas se carguen correctamente
 });
 
 
-function reiniciarRecetas() {
-    localStorage.removeItem('recetas'); // Eliminar recetas mal formateadas
-    localStorage.setItem('recetas', JSON.stringify(recetasBase)); // Restaurar el array base
-    filtrarPorCategoria(); // Actualizar la lista de recetas
-    alert('Recetas reiniciadas al estado inicial.');
-}
+
