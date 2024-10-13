@@ -292,7 +292,6 @@ form#form-receta button[type="submit"]:hover {
   border-bottom: 1px solid #ddd;
 }
 
-/* Responsive Design */
 @media only screen and (max-width: 600px) {
   nav ul li {
     display: block;
