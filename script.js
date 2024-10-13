@@ -201,16 +201,16 @@ function formatearInstrucciones(instrucciones) {
     if (Array.isArray(instrucciones)) {
         return instrucciones.map((inst, i) => {
             const paso = inst.trim();
-            // Asegurarse de que haya un solo punto final
-            return `${i + 1}. ${paso.replace(/\.+$/, '')}.`; // Remueve puntos finales previos y agrega uno
+            // Asegurarse de que no haya dos puntos finales
+            return `${i + 1}. ${paso.replace(/\.*$/, '')}.`; // Remueve puntos finales previos y agrega uno
         }).join("<br>"); // Separar los pasos con <br>
     }
 
     // Si las instrucciones son un string, se procesan
     return instrucciones.split("\n").map((inst, i) => {
         const paso = inst.trim().replace(/^\d+\.\s*/, ""); // Eliminar numeración manual si existe
-        // Asegurarse de que haya un solo punto final
-        return `${i + 1}. ${paso.replace(/\.+$/, '')}.`; // Remueve puntos finales previos y agrega uno
+        // Asegurarse de que no haya dos puntos finales
+        return `${i + 1}. ${paso.replace(/\.*$/, '')}.`; // Remueve puntos finales previos y agrega uno
     }).join("<br>"); // Separar los pasos con <br>
 }
 
