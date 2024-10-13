@@ -5,9 +5,9 @@ const recetasBase = [
         ingredientes: ["lechuga", "pollo", "queso parmesano", "crutones"], 
         categoria: "entradas",
         instrucciones: [
-            "Lavar y cortar la lechuga.",
-            "Cocinar el pollo y cortarlo en tiras.",
-            "Mezclar la lechuga con el pollo, queso parmesano y crutones.",
+            "Lavar y cortar la lechuga",
+            "Cocinar el pollo y cortarlo en tiras",
+            "Mezclar la lechuga con el pollo, queso parmesano y crutones",
             "Aliñar con salsa César."
         ]
     },
@@ -16,9 +16,9 @@ const recetasBase = [
         ingredientes: ["tomate", "ajo", "albahaca"], 
         categoria: "entradas",
         instrucciones: [
-            "Cortar los tomates y el ajo.",
-            "Sofreír el ajo en una olla con un poco de aceite.",
-            "Añadir los tomates y cocer durante 20 minutos.",
+            "Cortar los tomates y el ajo",
+            "Sofreír el ajo en una olla con un poco de aceite",
+            "Añadir los tomates y cocer durante 20 minutos",
             "Añadir la albahaca, licuar y servir."
         ]
     },
@@ -27,9 +27,9 @@ const recetasBase = [
         ingredientes: ["pasta", "queso", "carne", "salsa de tomate"], 
         categoria: "platos-principales",
         instrucciones: [
-            "Cocinar las láminas de pasta.",
-            "Sofreír la carne con la salsa de tomate.",
-            "Intercalar capas de pasta, carne y queso en una fuente.",
+            "Cocinar las láminas de pasta",
+            "Sofreír la carne con la salsa de tomate",
+            "Intercalar capas de pasta, carne y queso en una fuente",
             "Hornear durante 30 minutos a 180°C."
         ]
     },
@@ -38,9 +38,9 @@ const recetasBase = [
         ingredientes: ["chocolate", "azúcar", "harina"], 
         categoria: "postres",
         instrucciones: [
-            "Derretir el chocolate.",
-            "Mezclar con el azúcar y la harina.",
-            "Verter la mezcla en un molde.",
+            "Derretir el chocolate",
+            "Mezclar con el azúcar y la harina",
+            "Verter la mezcla en un molde",
             "Hornear durante 25 minutos a 180°C."
         ]
     },
@@ -49,9 +49,9 @@ const recetasBase = [
         ingredientes: ["menta", "ron", "limón", "azúcar"], 
         categoria: "bebidas",
         instrucciones: [
-            "Machacar las hojas de menta con el azúcar y el jugo de limón.",
-            "Añadir hielo y ron.",
-            "Rellenar con soda y remover.",
+            "Machacar las hojas de menta con el azúcar y el jugo de limón",
+            "Añadir hielo y ron",
+            "Rellenar con soda y remover",
             "Servir frío."
         ]
     }
@@ -197,7 +197,7 @@ function manejarFormularioReceta(event) {
 
 // Función para formatear las instrucciones antes de guardarlas o mostrarlas
 function formatearInstrucciones(instrucciones) {
-    // Si las instrucciones son un array, se procesan 
+    // Si las instrucciones son un array, se procesan
     if (Array.isArray(instrucciones)) {
         return instrucciones.map((inst, i) => {
             const paso = inst.trim();
@@ -237,7 +237,8 @@ document.addEventListener("DOMContentLoaded", () => {
         instruccionesHelpText.style.fontSize = "12px";
         instruccionesInput.parentNode.insertBefore(instruccionesHelpText, instruccionesInput.nextSibling);
     }
-  const btnReiniciarRecetas = document.getElementById('reiniciar-recetas');
+ // Asociar el botón de reinicio a la función reiniciarRecetas
+    const btnReiniciarRecetas = document.getElementById('reiniciar-recetas');
     if (btnReiniciarRecetas) {
         btnReiniciarRecetas.addEventListener('click', reiniciarRecetas);
     }
